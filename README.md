@@ -33,6 +33,7 @@ Parameters:
 
 ## Results sturcture:
 
+```
 ├── alignment
 │   ├── sample1_sorted.bam
 │   ├── sample1_sorted.bam.bai
@@ -62,3 +63,5 @@ Parameters:
     ├── sample1_val_2.fq.gz
     ├── sample2_val_1.fq.gz
     └── sample2_val_2.fq.gz
+
+```
