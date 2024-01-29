@@ -26,13 +26,18 @@ Parameters:
 --data_dir raw_data    The folder where the raw .fq files are.
 ```
 
-
 ## Workflow Summary
+1. Trimming adapter and low-quality bases (trim_galore)
+2. Removal of ribosomal RNA (SortMeRNA)
+3. Quality control for clean reads (fastQC)
+4. Mapping to genome (bowtie2)
+5. Aligment filter (samtools, bedtools)
+    reads mapping to blacklisted regions (..to be added)
+    unmapped & multiply mapped reads (samtools Q>20)
+6. Make .bw file from .bam
+7. Coverage evaluation
 
-
-
-## Results sturcture:
-
+## Results Sturcture
 ```
 ├── alignment
 │   ├── sample1_sorted.bam
@@ -63,5 +68,4 @@ Parameters:
     ├── sample1_val_2.fq.gz
     ├── sample2_val_1.fq.gz
     └── sample2_val_2.fq.gz
-
 ```

@@ -96,7 +96,7 @@ script:
     -x ${params.bowtie_idx} \
     -1 ${clean_fq1} \
     -2 ${clean_fq2} \
-    | samtools view -bS | samtools sort - > ${sample_id}_sorted.bam
+    | samtools view -bSq 20 | samtools sort - > ${sample_id}_sorted.bam
 
     samtools index ${sample_id}_sorted.bam
 
@@ -151,6 +151,8 @@ sample_sheet = Channel.fromPath(params.sample_sheet, checkIfExists: true)
                       .ifEmpty { exit 1, "sample sheet not found" }
                       .splitCsv(header:true, sep: ',')
 
+include {SORTMERNA} from './module/sortmerna'
+
 workflow {
 
     aln_in = sample_sheet.map { row -> row.fq1 = params.data_dir + "/" + row.fq1; row }
@@ -158,6 +160,7 @@ workflow {
                 .map { row -> [row.sample, file(row.fq1), file(row.fq2)] }
     aln_in |
     fastq_trim |
+    SORTMERNA |
     fastq_map  |
     (bam_2_bw & coverage_cal)
     fastq_QC(fastq_trim.out)
