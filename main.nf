@@ -21,6 +21,8 @@ if (params.help) {
     log.info '  --output_dir OUTDIR   Name for directory for saving the results. Default: results/'
     log.info '  --bowtie_idx bowtie_idx    bowtie index prefix for analysis.'
     log.info '  --data_dir raw_data    The folder where the raw .fq files are.'
+    log.info '  --remove_rRNA False  Whether to remove rRNAs from the library. If Ture, provide rRNA sequences.'
+    log.info '  --rRNA_fa rRNA sequences.' 
     exit 1
 }
 
@@ -151,19 +153,19 @@ sample_sheet = Channel.fromPath(params.sample_sheet, checkIfExists: true)
                       .ifEmpty { exit 1, "sample sheet not found" }
                       .splitCsv(header:true, sep: ',')
 
-include {SORTMERNA} from './module/sortmerna'
+include {SORTMERNA} from './modules/sortmerna'
 
 workflow {
 
     aln_in = sample_sheet.map { row -> row.fq1 = params.data_dir + "/" + row.fq1; row }
                 .map { row -> row.fq2 = params.data_dir + "/" + row.fq2; row }
                 .map { row -> [row.sample, file(row.fq1), file(row.fq2)] }
-    aln_in |
-    fastq_trim |
-    SORTMERNA |
-    fastq_map  |
+    trim_fq = aln_in | fastq_trim
+    if(params.remove_rRNA) {
+        trim_fq = SORTMERNA(trim_fq.mix(params.rRNA_fa))
+    }
+    trim_fq |
+    fastq_map |
     (bam_2_bw & coverage_cal)
     fastq_QC(fastq_trim.out)
 }
-
-

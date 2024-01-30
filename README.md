@@ -13,7 +13,7 @@ nextflow run ./ --help
 
 Test:
 ```
-nextflow run ./ -params-file ./test/params.config
+nextflow run ./ -c ./test/params.config
 ```
 
 Parameters:
@@ -24,6 +24,8 @@ Parameters:
 --output_dir OUTDIR   Name for directory for saving the results. Default: results/
 --bowtie_idx bowtie_idx    bowtie index prefix for analysis.
 --data_dir raw_data    The folder where the raw .fq files are.
+--remove_rRNA False  Whether to remove rRNAs from the library. If Ture, provide rRNA sequences. Default: false
+--rRNA_fa rRNA sequences.
 ```
 
 ## Workflow Summary
