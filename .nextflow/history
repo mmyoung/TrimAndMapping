@@ -1,0 +1,9 @@
+2024-01-29 21:45:18	-	cranky_faraday	-	476c43fb327bd452c2a9952f685aae85	d712a515-3bbf-4411-a4f3-f127127ffe63	nextflow run ./ --params-file ./test/params.config
+2024-01-29 21:55:01	-	crazy_linnaeus	-	476c43fb327bd452c2a9952f685aae85	27a2c69d-c8d6-4139-851e-7af100a84187	nextflow run ./ -params-file ./test/params.json
+2024-01-29 21:55:33	-	hungry_montalcini	-	f3e12a468f75f52415e9242cf0b9f1fc	f2ba02df-2c20-4b99-a099-303801c8d512	nextflow run ./ -params-file ./test/params.json
+2024-01-29 21:57:39	-	ridiculous_lamarr	-	f3e12a468f75f52415e9242cf0b9f1fc	a9603346-5943-4ff7-84f4-4696f5e495f6	nextflow run ./ -params-file ./test/params.json
+2024-01-29 21:57:54	-	golden_rosalind	-	476c43fb327bd452c2a9952f685aae85	11bd4303-9c14-4904-b8b4-3689328a0732	nextflow run ./ -params-file ./test/params.json
+2024-01-29 21:58:23	-	deadly_baekeland	-	a0e9edbe0cd34062f372c5c662f3f8a7	1f056d05-7c7e-4deb-a775-1fbea658ccfc	nextflow run ./ -params-file ./test/params.json
+2024-01-29 22:21:59	2s	condescending_linnaeus	ERR	de186b48e8a5b78a928150f6c39b5dae	65dd6aa7-75db-4ec7-98d8-7e4198c23e34	nextflow run ./ -params-file ./test/params.json
+2024-01-29 22:36:28	1m 36s	pedantic_leavitt	OK	de186b48e8a5b78a928150f6c39b5dae	9a53280e-df10-430a-a4eb-92690beeffcb	nextflow run ./ -c ./test/params.config
+2024-01-29 22:41:46	-	voluminous_meucci	-	de186b48e8a5b78a928150f6c39b5dae	5d162f42-4ade-44bb-889b-54f7b79c9756	nextflow run ./ --help

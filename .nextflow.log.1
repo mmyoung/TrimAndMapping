@@ -1,0 +1,105 @@
+Jan-29 22:36:27.507 [main] DEBUG nextflow.cli.Launcher - $> nextflow run ./ -c ./test/params.config
+Jan-29 22:36:27.570 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.1
+Jan-29 22:36:27.594 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/project/zhuzhuzhang/lyang/nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.3,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.1
+Jan-29 22:36:27.601 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jan-29 22:36:27.602 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jan-29 22:36:27.605 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jan-29 22:36:27.612 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jan-29 22:36:28.077 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /project/gzy8899/lyang/TrimAndMapping/nextflow.config
+Jan-29 22:36:28.080 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /project/gzy8899/lyang/TrimAndMapping/./test/params.config
+Jan-29 22:36:28.080 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /project/gzy8899/lyang/TrimAndMapping/nextflow.config
+Jan-29 22:36:28.081 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /project/gzy8899/lyang/TrimAndMapping/test/params.config
+Jan-29 22:36:28.090 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jan-29 22:36:28.120 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jan-29 22:36:28.171 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Jan-29 22:36:28.185 [main] INFO  nextflow.cli.CmdRun - Launching `./main.nf` [pedantic_leavitt] DSL2 - revision: de186b48e8
+Jan-29 22:36:28.186 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jan-29 22:36:28.186 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jan-29 22:36:28.194 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /project/zhuzhuzhang/lyang/nextflow/secrets/store.json
+Jan-29 22:36:28.197 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@f5b6e78] - activable => nextflow.secret.LocalSecretsProvider@f5b6e78
+Jan-29 22:36:28.239 [main] DEBUG nextflow.Session - Session UUID: 9a53280e-df10-430a-a4eb-92690beeffcb
+Jan-29 22:36:28.240 [main] DEBUG nextflow.Session - Run name: pedantic_leavitt
+Jan-29 22:36:28.240 [main] DEBUG nextflow.Session - Executor pool size: 64
+Jan-29 22:36:28.246 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jan-29 22:36:28.249 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=192; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jan-29 22:36:28.275 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.1 build 5891
+  Created: 12-01-2024 22:01 UTC (16:01 CDT)
+  System: Linux 4.18.0-305.57.1.el8_4.x86_64
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 20.0.2-internal-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 1014572@midway3-login3.rcc.local [10.50.248.65]
+  CPUs: 64 - Mem: 251.1 GB (18.2 GB) - Swap: 4 GB (0)
+Jan-29 22:36:28.296 [main] DEBUG nextflow.Session - Work-dir: /project/zhuzhuzhang/lyang/nextflow [gpfs]
+Jan-29 22:36:28.296 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /project/gzy8899/lyang/TrimAndMapping/bin
+Jan-29 22:36:28.304 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jan-29 22:36:28.311 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jan-29 22:36:28.328 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jan-29 22:36:28.335 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 65; maxThreads: 1000
+Jan-29 22:36:28.393 [main] DEBUG nextflow.Session - Session start
+Jan-29 22:36:28.860 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-29 22:36:29.055 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Jan-29 22:36:29.055 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Jan-29 22:36:29.062 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Jan-29 22:36:29.067 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Jan-29 22:36:29.068 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Jan-29 22:36:29.069 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Jan-29 22:36:29.118 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Jan-29 22:36:29.118 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Jan-29 22:36:29.123 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Jan-29 22:36:29.123 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Jan-29 22:36:29.126 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Jan-29 22:36:29.126 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Jan-29 22:36:29.130 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Jan-29 22:36:29.130 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Jan-29 22:36:29.132 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: coverage_cal, bam_2_bw, fastq_trim, fastq_QC, fastq_map, SORTMERNA
+Jan-29 22:36:29.132 [main] DEBUG nextflow.Session - Igniting dataflow network (6)
+Jan-29 22:36:29.136 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastq_trim
+Jan-29 22:36:29.136 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastq_map
+Jan-29 22:36:29.137 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bam_2_bw
+Jan-29 22:36:29.137 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > coverage_cal
+Jan-29 22:36:29.137 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastq_QC
+Jan-29 22:36:29.137 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_0c4b333a9c3a17f3: /project/gzy8899/lyang/TrimAndMapping/./modules/sortmerna/main.nf
+  Script_36a6017338069a50: /project/gzy8899/lyang/TrimAndMapping/main.nf
+Jan-29 22:36:29.137 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jan-29 22:36:29.137 [main] DEBUG nextflow.Session - Session await
+Jan-29 22:36:29.615 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process fastq_trim (Adapter and low-quality based trimming) > jobId: 15143696; workDir: /project/zhuzhuzhang/lyang/nextflow/51/8498f3b8938c0070d0e20377d01951
+Jan-29 22:36:29.616 [Task submitter] INFO  nextflow.Session - [51/8498f3] Submitted process > fastq_trim (Adapter and low-quality based trimming)
+Jan-29 22:36:29.701 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process fastq_trim (Adapter and low-quality based trimming) > jobId: 15143697; workDir: /project/zhuzhuzhang/lyang/nextflow/d1/5a65ce1f7f83a7aa7e31641c23a82d
+Jan-29 22:36:29.701 [Task submitter] INFO  nextflow.Session - [d1/5a65ce] Submitted process > fastq_trim (Adapter and low-quality based trimming)
+Jan-29 22:36:44.078 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 15143697; id: 1; name: fastq_trim (Adapter and low-quality based trimming); status: COMPLETED; exit: 0; error: -; workDir: /project/zhuzhuzhang/lyang/nextflow/d1/5a65ce1f7f83a7aa7e31641c23a82d started: 1706589394095; exited: 2024-01-30T04:36:43.176582Z; ]
+Jan-29 22:36:44.111 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=192; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jan-29 22:36:44.192 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process fastq_QC (QC for clean .fastq ...) > jobId: 15143716; workDir: /project/zhuzhuzhang/lyang/nextflow/b1/31204303e7d37a1d83739d73e157af
+Jan-29 22:36:44.192 [Task submitter] INFO  nextflow.Session - [b1/312043] Submitted process > fastq_QC (QC for clean .fastq ...)
+Jan-29 22:36:44.277 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process fastq_map (Mapping clean reads to bowtie index) > jobId: 15143717; workDir: /project/zhuzhuzhang/lyang/nextflow/59/9d40b2666d903e4e31d2416808cc2c
+Jan-29 22:36:44.277 [Task submitter] INFO  nextflow.Session - [59/9d40b2] Submitted process > fastq_map (Mapping clean reads to bowtie index)
+Jan-29 22:36:49.074 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 15143696; id: 2; name: fastq_trim (Adapter and low-quality based trimming); status: COMPLETED; exit: 0; error: -; workDir: /project/zhuzhuzhang/lyang/nextflow/51/8498f3b8938c0070d0e20377d01951 started: 1706589394074; exited: 2024-01-30T04:36:44.211363Z; ]
+Jan-29 22:36:49.084 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 15143717; id: 4; name: fastq_map (Mapping clean reads to bowtie index); status: COMPLETED; exit: 0; error: -; workDir: /project/zhuzhuzhang/lyang/nextflow/59/9d40b2666d903e4e31d2416808cc2c started: 1706589409082; exited: 2024-01-30T04:36:46.070831Z; ]
+Jan-29 22:36:49.167 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process fastq_QC (QC for clean .fastq ...) > jobId: 15143719; workDir: /project/zhuzhuzhang/lyang/nextflow/95/635f12bd9c1a64ab20e05d78923512
+Jan-29 22:36:49.167 [Task submitter] INFO  nextflow.Session - [95/635f12] Submitted process > fastq_QC (QC for clean .fastq ...)
+Jan-29 22:36:49.250 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process fastq_map (Mapping clean reads to bowtie index) > jobId: 15143720; workDir: /project/zhuzhuzhang/lyang/nextflow/c7/663e3e0e92c3fe9d639bd350f70244
+Jan-29 22:36:49.250 [Task submitter] INFO  nextflow.Session - [c7/663e3e] Submitted process > fastq_map (Mapping clean reads to bowtie index)
+Jan-29 22:36:49.337 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process coverage_cal (Calculate the reads coverage in each base ...) > jobId: 15143721; workDir: /project/zhuzhuzhang/lyang/nextflow/72/3876334164259b2633d51d87f68eff
+Jan-29 22:36:49.338 [Task submitter] INFO  nextflow.Session - [72/387633] Submitted process > coverage_cal (Calculate the reads coverage in each base ...)
+Jan-29 22:36:49.416 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process bam_2_bw (Making .bw files from .bam files) > jobId: 15143722; workDir: /project/zhuzhuzhang/lyang/nextflow/76/efaf8d1a4f319868ecc91832969a69
+Jan-29 22:36:49.416 [Task submitter] INFO  nextflow.Session - [76/efaf8d] Submitted process > bam_2_bw (Making .bw files from .bam files)
+Jan-29 22:36:54.074 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 15143716; id: 3; name: fastq_QC (QC for clean .fastq ...); status: COMPLETED; exit: 0; error: -; workDir: /project/zhuzhuzhang/lyang/nextflow/b1/31204303e7d37a1d83739d73e157af started: 1706589409080; exited: 2024-01-30T04:36:50.772281Z; ]
+Jan-29 22:36:54.173 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 15143720; id: 5; name: fastq_map (Mapping clean reads to bowtie index); status: COMPLETED; exit: 0; error: -; workDir: /project/zhuzhuzhang/lyang/nextflow/c7/663e3e0e92c3fe9d639bd350f70244 started: 1706589414171; exited: 2024-01-30T04:36:51.301796Z; ]
+Jan-29 22:36:54.261 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process coverage_cal (Calculate the reads coverage in each base ...) > jobId: 15143723; workDir: /project/zhuzhuzhang/lyang/nextflow/94/64d6d6aea74756ecc8cb64b4884195
+Jan-29 22:36:54.261 [Task submitter] INFO  nextflow.Session - [94/64d6d6] Submitted process > coverage_cal (Calculate the reads coverage in each base ...)
+Jan-29 22:36:54.352 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process bam_2_bw (Making .bw files from .bam files) > jobId: 15143724; workDir: /project/zhuzhuzhang/lyang/nextflow/41/0e00b5c12d5cae45b8efac24cdd089
+Jan-29 22:36:54.353 [Task submitter] INFO  nextflow.Session - [41/0e00b5] Submitted process > bam_2_bw (Making .bw files from .bam files)
+Jan-29 22:36:59.074 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 15143719; id: 6; name: fastq_QC (QC for clean .fastq ...); status: COMPLETED; exit: 0; error: -; workDir: /project/zhuzhuzhang/lyang/nextflow/95/635f12bd9c1a64ab20e05d78923512 started: 1706589414170; exited: 2024-01-30T04:36:56.325316Z; ]
+Jan-29 22:36:59.152 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 15143722; id: 8; name: bam_2_bw (Making .bw files from .bam files); status: COMPLETED; exit: 0; error: -; workDir: /project/zhuzhuzhang/lyang/nextflow/76/efaf8d1a4f319868ecc91832969a69 started: 1706589414178; exited: 2024-01-30T04:36:59.051322Z; ]
+Jan-29 22:37:04.074 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 15143724; id: 9; name: bam_2_bw (Making .bw files from .bam files); status: COMPLETED; exit: 0; error: -; workDir: /project/zhuzhuzhang/lyang/nextflow/41/0e00b5c12d5cae45b8efac24cdd089 started: 1706589419158; exited: 2024-01-30T04:36:59.959137Z; ]
+Jan-29 22:37:59.076 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 15143721; id: 7; name: coverage_cal (Calculate the reads coverage in each base ...); status: COMPLETED; exit: 0; error: -; workDir: /project/zhuzhuzhang/lyang/nextflow/72/3876334164259b2633d51d87f68eff started: 1706589414177; exited: 2024-01-30T04:37:58.408982Z; ]
+Jan-29 22:38:04.076 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 15143723; id: 10; name: coverage_cal (Calculate the reads coverage in each base ...); status: COMPLETED; exit: 0; error: -; workDir: /project/zhuzhuzhang/lyang/nextflow/94/64d6d6aea74756ecc8cb64b4884195 started: 1706589419157; exited: 2024-01-30T04:38:02.650312Z; ]
+Jan-29 22:38:04.081 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jan-29 22:38:04.081 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: slurm) - terminating tasks monitor poll loop
+Jan-29 22:38:04.082 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jan-29 22:38:04.084 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Jan-29 22:38:04.089 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=10; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=2m 55s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=3; peakMemory=0; ]
+Jan-29 22:38:04.130 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jan-29 22:38:04.141 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Jan-29 22:38:04.142 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

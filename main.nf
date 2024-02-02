@@ -87,7 +87,7 @@ input:
     tuple val(sample_id), path(clean_fq1), path(clean_fq2)
 
 output:
-    tuple val(sample_id), path("${sample_id}_sorted.bam"), path("${sample_id}_sorted.bam.bai")
+    tuple val(sample_id), path("${sample_id}_map.bam")
 
 script:
 
@@ -98,9 +98,7 @@ script:
     -x ${params.bowtie_idx} \
     -1 ${clean_fq1} \
     -2 ${clean_fq2} \
-    | samtools view -bSq 20 | samtools sort - > ${sample_id}_sorted.bam
-
-    samtools index ${sample_id}_sorted.bam
+    | samtools view -bS -o ${sample_id}_map.bam
 
 """
 }
@@ -154,6 +152,7 @@ sample_sheet = Channel.fromPath(params.sample_sheet, checkIfExists: true)
                       .splitCsv(header:true, sep: ',')
 
 include {SORTMERNA} from './modules/sortmerna'
+include {MARK_DUPLICATES} from './module/markduplicates'
 
 workflow {
 
@@ -162,10 +161,11 @@ workflow {
                 .map { row -> [row.sample, file(row.fq1), file(row.fq2)] }
     trim_fq = aln_in | fastq_trim
     if(params.remove_rRNA) {
-        trim_fq = SORTMERNA(trim_fq.mix(params.rRNA_fa))
+        trim_fq = SORTMERNA(trim_fq.concat(params.rRNA_fa))
     }
     trim_fq |
     fastq_map |
+    MARK_DUPLICATES |
     (bam_2_bw & coverage_cal)
     fastq_QC(fastq_trim.out)
 }

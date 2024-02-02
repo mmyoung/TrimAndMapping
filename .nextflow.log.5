@@ -1,0 +1,128 @@
+Jan-29 21:58:22.119 [main] DEBUG nextflow.cli.Launcher - $> nextflow run ./ -params-file ./test/params.json
+Jan-29 21:58:22.233 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.1
+Jan-29 21:58:22.256 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/project/zhuzhuzhang/lyang/nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.3,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.1
+Jan-29 21:58:22.269 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jan-29 21:58:22.270 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jan-29 21:58:22.274 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jan-29 21:58:22.285 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jan-29 21:58:22.953 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /project/gzy8899/lyang/TrimAndMapping/nextflow.config
+Jan-29 21:58:22.955 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /project/gzy8899/lyang/TrimAndMapping/nextflow.config
+Jan-29 21:58:22.983 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jan-29 21:58:23.055 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Jan-29 21:58:23.072 [main] INFO  nextflow.cli.CmdRun - Launching `./main.nf` [deadly_baekeland] DSL2 - revision: a0e9edbe0c
+Jan-29 21:58:23.073 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jan-29 21:58:23.074 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jan-29 21:58:23.084 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /project/zhuzhuzhang/lyang/nextflow/secrets/store.json
+Jan-29 21:58:23.089 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@376c7d7d] - activable => nextflow.secret.LocalSecretsProvider@376c7d7d
+Jan-29 21:58:23.148 [main] DEBUG nextflow.Session - Session UUID: 1f056d05-7c7e-4deb-a775-1fbea658ccfc
+Jan-29 21:58:23.148 [main] DEBUG nextflow.Session - Run name: deadly_baekeland
+Jan-29 21:58:23.149 [main] DEBUG nextflow.Session - Executor pool size: 64
+Jan-29 21:58:23.169 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jan-29 21:58:23.176 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=192; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jan-29 21:58:23.223 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.1 build 5891
+  Created: 12-01-2024 22:01 UTC (16:01 CDT)
+  System: Linux 4.18.0-305.57.1.el8_4.x86_64
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 20.0.2-internal-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 857656@midway3-login3.rcc.local [10.50.248.65]
+  CPUs: 64 - Mem: 251.1 GB (1.2 GB) - Swap: 4 GB (0)
+Jan-29 21:58:23.254 [main] DEBUG nextflow.Session - Work-dir: /project/zhuzhuzhang/lyang/nextflow [gpfs]
+Jan-29 21:58:23.254 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /project/gzy8899/lyang/TrimAndMapping/bin
+Jan-29 21:58:23.270 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jan-29 21:58:23.280 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jan-29 21:58:23.310 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jan-29 21:58:23.324 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 65; maxThreads: 1000
+Jan-29 21:58:23.412 [main] DEBUG nextflow.Session - Session start
+Jan-29 21:58:23.882 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-29 21:58:24.085 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Jan-29 21:58:24.085 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Jan-29 21:58:24.093 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Jan-29 21:58:24.099 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Jan-29 21:58:24.100 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Jan-29 21:58:24.102 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Jan-29 21:58:24.152 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_0c4b333a9c3a17f3: /project/gzy8899/lyang/TrimAndMapping/./modules/sortmerna/main.nf
+  Script_82cd6872d6d17db3: /project/gzy8899/lyang/TrimAndMapping/main.nf
+Jan-29 21:58:24.153 [main] DEBUG nextflow.Session - Session aborted -- Cause: Not a valid process label: Removing rRNA reads -- Label must consist of alphanumeric characters or '_', must start with an alphabetic character and must end with an alphanumeric character
+Jan-29 21:58:24.164 [main] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] ifEmpty
+  [operator] splitCsv
+  [operator] map
+  [operator] map
+  [operator] map
+
+Jan-29 21:58:24.168 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: slurm) - terminating tasks monitor poll loop
+Jan-29 21:58:24.168 [main] ERROR nextflow.cli.Launcher - @unknown
+nextflow.exception.IllegalConfigException: Not a valid process label: Removing rRNA reads -- Label must consist of alphanumeric characters or '_', must start with an alphabetic character and must end with an alphanumeric character
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at nextflow.script.ProcessConfig.label(ProcessConfig.groovy:695)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:362)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at Script_0c4b333a9c3a17f3$_runScript_closure1.doCall(Script_0c4b333a9c3a17f3:3)
+	at Script_0c4b333a9c3a17f3$_runScript_closure1.doCall(Script_0c4b333a9c3a17f3)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.ProcessDef.initialize(ProcessDef.groovy:110)
+	at nextflow.script.ProcessDef.run(ProcessDef.groovy:168)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.extension.ChannelEx.or(ChannelEx.groovy:156)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.metaclass.ReflectionMetaMethod.invoke(ReflectionMetaMethod.java:54)
+	at org.codehaus.groovy.runtime.metaclass.NewInstanceMetaMethod.invoke(NewInstanceMetaMethod.java:54)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1254)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.runtime.metaclass.NextflowDelegatingMetaClass.invokeMethod(NextflowDelegatingMetaClass.java:64)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:38)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at Script_82cd6872d6d17db3$_runScript_closure7$_closure26.doCall(Script_82cd6872d6d17db3:161)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:188)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ChainableDef$invoke_a.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:183)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:242)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:137)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
+	at nextflow.cli.Launcher.run(Launcher.groovy:500)
+	at nextflow.cli.Launcher.main(Launcher.groovy:672)
+Jan-29 21:58:24.172 [Actor Thread 6] DEBUG nextflow.Nextflow - Ignoring exit because execution is already aborted -- message=sample sheet not found
