@@ -34,7 +34,7 @@ Parameters:
 3. Quality control for clean reads (fastQC)
 4. Mapping to genome (bowtie2)
 5. Aligment filter (samtools, bedtools)
-    reads mapping to blacklisted regions (..to be added)
+    deduplication (picard)
     unmapped & multiply mapped reads (samtools Q>20)
 6. Make .bw file from .bam
 7. Coverage evaluation
